@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   FIELDS CONSULTING — Global Styles
+   Executive minimalism. Sharp corners. Hairline rules.
+   ============================================================ */
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bone text-ink font-sans;
+    font-size: 1.0625rem; /* 17px base on mobile */
+    line-height: 1.65;
+    font-feature-settings: 'ss01', 'ss03', 'cv11';
+  }
+
+  @media (min-width: 768px) {
+    body {
+      font-size: 1.125rem; /* 18px on desktop per spec */
+    }
+  }
+
+  /* Headlines never use bold; use medium weight per spec */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
+  }
+
+  /* Editorial moments — only the hero H1 receives the serif */
+  .editorial {
+    @apply font-display;
+    font-feature-settings: 'ss01';
+  }
+
+  /* Selection — quietly branded */
+  ::selection {
+    background-color: #0A0A0A;
+    color: #F7F7F5;
+  }
+
+  /* Focus rings — accessible without being decorative */
+  :focus-visible {
+    outline: 2px solid #0A0A0A;
+    outline-offset: 3px;
+  }
+
+  /* Hide focus on mouse, show on keyboard */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@layer components {
+  /* ============================================================
+     Eyebrow — small caps section anchors
+     ============================================================ */
+  .eyebrow {
+    @apply text-eyebrow uppercase font-medium;
+    letter-spacing: 0.12em;
+  }
+
+  /* ============================================================
+     Container — 1200px max width, 24px gutter on mobile
+     ============================================================ */
+  .shell {
+    @apply mx-auto max-w-shell px-6 md:px-10 lg:px-16;
+  }
+
+  /* ============================================================
+     Section — vertical rhythm per spec (96-128px desktop)
+     ============================================================ */
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-tight {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* ============================================================
+     Buttons — square, sharp, no rounding ever
+     ============================================================ */
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-ink text-bone
+           px-9 py-[18px] text-[0.9375rem] font-medium
+           transition-colors duration-200
+           hover:bg-hunter
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
+    border-radius: 0;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary-on-dark {
+    @apply inline-flex items-center justify-center bg-bone text-ink
+           px-9 py-[18px] text-[0.9375rem] font-medium
+           transition-colors duration-200
+           hover:bg-heritage
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
+    border-radius: 0;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center bg-transparent text-ink
+           px-9 py-[17px] text-[0.9375rem] font-medium
+           border border-ink
+           transition-colors duration-200
+           hover:bg-ink hover:text-bone
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2;
+    border-radius: 0;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-secondary-on-dark {
+    @apply inline-flex items-center justify-center bg-transparent text-bone
+           px-9 py-[17px] text-[0.9375rem] font-medium
+           border border-bone
+           transition-colors duration-200
+           hover:bg-bone hover:text-ink
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
+    border-radius: 0;
+    letter-spacing: 0.01em;
+  }
+
+  /* ============================================================
+     Tertiary link — underline arrow link
+     ============================================================ */
+  .link-arrow {
+    @apply inline-flex items-center gap-2 text-ink font-medium
+           border-b border-ink pb-0.5
+           transition-colors duration-200
+           hover:text-hunter hover:border-hunter;
+    letter-spacing: 0.01em;
+  }
+
+  .link-arrow-on-dark {
+    @apply inline-flex items-center gap-2 text-bone font-medium
+           border-b border-bone pb-0.5
+           transition-colors duration-200
+           hover:text-heritage hover:border-heritage;
+  }
+
+  /* ============================================================
+     Card — hard-edged rectangle, hairline border, no shadow
+     ============================================================ */
+  .card {
+    @apply bg-transparent border border-line p-8 md:p-10
+           transition-colors duration-200
+           hover:border-ink;
+    border-radius: 0;
+  }
+
+  .card-on-dark {
+    @apply bg-transparent border border-white/10 p-8 md:p-10
+           transition-colors duration-200
+           hover:border-white/40;
+    border-radius: 0;
+  }
+
+  /* ============================================================
+     Form inputs — square, hairline, premium feel
+     ============================================================ */
+  .input,
+  .textarea,
+  .select {
+    @apply w-full bg-transparent border border-line
+           px-4 py-3.5 text-ink
+           placeholder:text-slate
+           transition-colors duration-200
+           focus:border-ink focus:outline-none;
+    border-radius: 0;
+  }
+
+  .textarea {
+    @apply min-h-[140px] resize-y;
+  }
+
+  .label {
+    @apply block text-[0.8125rem] font-medium uppercase tracking-[0.08em] text-ink mb-2;
+  }
+
+  /* ============================================================
+     Hairline horizontal rules — sectional dividers
+     ============================================================ */
+  .hairline {
+    @apply h-px w-full bg-line;
+  }
+
+  .hairline-dark {
+    @apply h-px w-full bg-white/10;
+  }
+}
