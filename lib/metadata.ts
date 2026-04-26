@@ -16,11 +16,11 @@ export function buildMetadata({
   path?: string;
   noIndex?: boolean;
 }): Metadata {
-  const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
+    const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
   const url = `${site.url}${path}`;
 
   return {
-    title: fullTitle,
+        title: { absolute: fullTitle },
     description,
     alternates: { canonical: url },
     robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
