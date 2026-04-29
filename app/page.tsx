@@ -274,6 +274,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-5">
             <PortraitPlaceholder
+              src={images.aboutSnapshot.src}
               label="Laura portrait image — about snapshot"
               alt="Laura Fields"
               aspect="portrait"
