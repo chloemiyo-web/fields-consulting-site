@@ -24,7 +24,7 @@ export function Navigation() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-bone/95 backdrop-blur-sm border-b border-line">
+        <header className="sticky top-0 z-40 w-full bg-bone/95 border-b border-line">
       <div className="shell flex items-center justify-between h-[72px]">
         {/* Wordmark */}
         <Link
