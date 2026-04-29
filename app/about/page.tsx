@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/metadata';
-import { calendly, credentials, site } from '@/lib/config';
+import { calendly, credentials, images, site } from '@/lib/config';
 import { Eyebrow, PortraitPlaceholder, Section } from '@/components/UI';
 import { PersonSchema, BreadcrumbSchema } from '@/components/Schema';
 
@@ -38,6 +38,7 @@ export default function AboutPage() {
             </div>
             <div className="lg:col-span-5">
               <PortraitPlaceholder
+                src={images.aboutFull.src}
                 label="Laura portrait image — about page"
                 alt="Laura Fields"
                 aspect="portrait"
