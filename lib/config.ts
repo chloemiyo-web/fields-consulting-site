@@ -49,14 +49,14 @@ export const site = {
  *  hard-coded into pages.
  * ============================================================ */
 export const contact = {
-  email: 'hello@fieldsconsulting.com',
+    email: 'lfields@laurafieldsllc.com',
 
   // Calendly
-  discoveryCallUrl: 'https://calendly.com/fieldsconsulting/discovery-call',
+    discoveryCallUrl: 'https://calendar.app.google/69JLKqM1ViLNjj1B8',
   strategySessionUrl: 'https://calendly.com/fieldsconsulting/strategy-session',
 
   // Social
-  linkedin: 'https://www.linkedin.com/in/laurafields',
+    linkedin: 'https://www.linkedin.com/in/laura-fields27/',
   // Add more channels as they go live (leave empty strings to hide automatically):
   // twitter: '',
   // youtube: '',
