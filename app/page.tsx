@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/metadata';
-import { calendly, credentials, features, site } from '@/lib/config';
+import { calendly, credentials, features, images, site } from '@/lib/config';
 import { Eyebrow, Hairline, PortraitPlaceholder, Section } from '@/components/UI';
 import { NewsletterForm } from '@/components/NewsletterForm';
 
@@ -49,6 +49,7 @@ export default function HomePage() {
             </div>
             <div className="lg:col-span-4">
               <PortraitPlaceholder
+                src={images.heroPortrait.src}
                 label="Laura portrait image — hero"
                 alt="Laura Fields, Founder of Fields Consulting"
                 aspect="portrait"
