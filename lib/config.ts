@@ -94,17 +94,17 @@ export const features = {
  * ============================================================ */
 export const images = {
   heroPortrait: {
-    src: '', // e.g. '/images/laura-hero.jpg'
+        src: '/images/laura-hero.jpg',
     alt: 'Laura Fields, Founder of Fields Consulting',
     placeholder: 'Laura portrait image — hero',
   },
   aboutSnapshot: {
-    src: '',
+        src: '/images/laura-about.jpg',
     alt: 'Laura Fields',
     placeholder: 'Laura portrait image — about snapshot',
   },
   aboutFull: {
-    src: '',
+        src: '/images/laura-about.jpg',
     alt: 'Laura Fields',
     placeholder: 'Laura portrait image — about page',
   },
