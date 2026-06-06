@@ -76,7 +76,7 @@ export function Footer() {
         <div className="hairline-dark mt-16" />
         <div className="flex flex-col md:flex-row justify-between gap-4 mt-8 text-[0.8125rem] text-bone/50">
           <p>
-            © {site.copyrightYear} {site.legalName}. All rights reserved.
+            © {site.copyrightYear} {site.legalName}. All rights reserved. Created by <a href="https://miyokoadvisory.com" target="_blank" rel="noopener noreferrer" className="hover:text-bone/80 transition-colors">Miyoko Advisory</a>.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-bone/80 transition-colors">
